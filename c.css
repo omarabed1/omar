@@ -1,0 +1,75 @@
+.reed{
+    color: rgb(20, 57, 223);
+    font-size: 40px;
+}
+.wdiv{
+    width: 200px;
+    height: 200px;
+}
+body{
+    background-color: black;
+}
+.div1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body .cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+.card{
+display:grid ;
+grid-template-columns: 300px;
+grid-template-rows: 210px 210px 80px;
+grid-template-areas: "image" "text" "stats";
+
+border-radius: 18px;
+background-color: white;
+box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+text-align: center;
+
+transition: 0.5s ease;
+cursor: pointer;
+margin: 20px;
+}
+
+.card-img{
+    grid-area: image;
+    background: url("1.jpeg");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size:cover ;
+}
+.card-bady{
+    grid-area: text;
+    margin: 25px;
+}
+.card-front{
+    grid-area: stats;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: darkmagenta;
+}
+
+.card-front p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+.card-front .border{
+    border-right: 1px solid rgba(8, 8, 8, 0.9);
+}
+.card:hover{
+    transform: scale(1.2);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
